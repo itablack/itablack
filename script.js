@@ -29,22 +29,24 @@ class Telephone {
     dialPhoneNumber(phoneNumber) {
       if (this.phoneNumbers.includes(phoneNumber)) {
         this.notifyObservers(phoneNumber);
-        console.log(Dialing ${phoneNumber});
-      } else {
-        console.log(PhoneNumber {phoneNumber}not found.);
+        console.log(`Dialing ${phoneNumber}`);
+      } 
+      
+      else {
+        console.log(`PhoneNumber ${phoneNumber}not found`)
       }
     }
   }
   
   class PhoneNumberObserver {
     notify(phoneNumber) {
-      console.log(PhoneNumber: ${phoneNumber});
+      console.log(`PhoneNumber: ${phoneNumber}`);
     }
   }
   
   class DialingObserver {
     notify(phoneNumber) {
-      console.log(NowDialing: ${phoneNumber});
+      console.log(`NowDialing: ${phoneNumber}`);
     }
   }
   
